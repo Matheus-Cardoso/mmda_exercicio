@@ -1,0 +1,47 @@
+<?php
+  function form_1_form($form, &$form_state) {
+
+    $form['name'] = array(
+      '#type' => 'textfield',
+      '#title' => 'Your Name',
+      '#maxlenght' => 30,
+      '#required' => TRUE
+    );
+
+    $form['last_name'] = array(
+      '#type' => 'textfield',
+      '#type' => 'textfield',
+      '#title' => 'Last name',
+      '#required' => TRUE
+    );
+
+    $form['submit_button'] = array(
+      '#type' => 'submit',
+      '#value' => t('Submit'),
+    );
+
+    return $form;
+}
+
+  function form_1_form_validate($form, &$form_state) {
+
+  }
+  function form_1_form_submit($form, &$form_state) {
+
+  }
+
+  function form_1_menu(){
+    $items = array();
+    $items['forms/form-1'] = array(
+      'title' => 'Formula 1 subscription',
+      'description' => 'Want to try racing with a F1 car?',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('form_1_form'),
+      'access callback' => TRUE
+    );
+
+    dd("GNE");
+
+    return $items;
+
+  }
