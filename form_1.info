@@ -1,3 +1,10 @@
-core = "7.x"
-description = "Basic Form with Drupal's Form api"
-name = "Form 1 Module"
+<?php
+
+name = Form_1
+description = Form_1 module
+core = 7.x
+package = User interface
+dependencies[] = ctools
+dependencies[] = views
+
+?>
