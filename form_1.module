@@ -1,7 +1,7 @@
 <?php
   function form_1_modal_page($js = NULL, $nid = NULL) {
     if($nid == NULL){
-      return 'Node Error'
+      return 'Node Error';
     }
     if($js){
       ctools_include('modal');
