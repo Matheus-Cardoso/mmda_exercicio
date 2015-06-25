@@ -118,4 +118,6 @@
       // Ctools knows what Javascript settings to use in generating the modal:
       $vars['ctools_link'] = ctools_modal_text_button($name, $href, t('View node content for @name', array('@name' => $name)), 'ctools-modal-happy-modal-style');
     }
+
+    $vars['theme_hook_suggestions'][] = 'views_view_fields__form';
   }
